@@ -109,3 +109,119 @@ function printsFromNumParamIntoDescendingOneByThreeIncrements (num) {
 printsFromNumParamIntoDescendingOneByThreeIncrements(20);
 
 makeSeparatorChallengeNum(9);
+
+function printsHelloSevenTimes () {
+    let startNum = 1;
+    while (startNum <= 7){
+    console.log(startNum + '. Hello!');
+    startNum = startNum + 1;
+    }
+}
+
+printsHelloSevenTimes();
+
+makeSeparatorChallengeNum(10);
+
+function printsHelloSevenTimesPlusStrParam (str) {
+    let startNum = 1;
+    while (startNum <= 7) {
+        console.log(startNum + ' ' + str);
+        startNum = startNum + 1;
+    }
+}
+
+printsHelloSevenTimesPlusStrParam('This is an Epic Count to Seven');
+
+makeSeparatorChallengeNum(11);
+
+function printsStrThatNumberOfTimes (str, num) {
+    let startNum = 1;
+    while (startNum <= num) {
+        console.log(str);
+        startNum = startNum + 1;
+    }
+}
+
+printsStrThatNumberOfTimes('Good-bye...', 4);
+
+makeSeparatorChallengeNum(12);
+
+function printsStrCharsIndividually (str) {
+    let strAtZero = 0;
+    while (strAtZero < str.length) {
+        console.log(str.charAt(strAtZero));
+        strAtZero = strAtZero + 1;
+    }
+}
+
+printsStrCharsIndividually('think');
+
+makeSeparatorChallengeNum(13);
+
+function printsStrCharsEveryOtherChar (str) {
+    let strAtZero = 0;
+    while (strAtZero < str.length) {
+        if (strAtZero % 2 === 1){
+        console.log(str.charAt(strAtZero));
+        strAtZero = strAtZero + 1;
+        }else if (strAtZero % 2 === 0) {
+            strAtZero = strAtZero + 1;
+        }
+    }
+}
+printsStrCharsEveryOtherChar('Nobody');
+
+makeSeparatorChallengeNum(14);
+
+function printsStrCharsBackwards (str) {
+    let CharsLength = str.length;
+    while (CharsLength --) {
+    console.log(str.charAt(CharsLength));
+    }
+}
+
+printsStrCharsBackwards('think');
+
+makeSeparatorChallengeNum (15);
+
+function printsFizzBuzz (num) {
+    let startNum = 1;
+    while (startNum <= num){
+        if ((num % 3 === 0 && num % 5 === 0)){
+            console.log('FizzBuzz');
+            break;
+        } else if (num % 3 === 0) {
+            console.log('Fizz');
+            break;
+        } else if (num % 5 === 0) {
+            console.log ('Buzz');
+            break;
+        } else {
+            console.log(startNum);
+            startNum = startNum + 1;
+        }
+    }
+}
+
+printsFizzBuzz (5);
+printsFizzBuzz (30);
+printsFizzBuzz (6);
+printsFizzBuzz (5);
+printsFizzBuzz (8);
+
+makeSeparatorChallengeNum(16);
+
+function fibonacci (num) {
+    let startSequence = 1;
+    let intermediateSequence = 0;
+    let temporaryVar;
+    while (num --) {
+        temporaryVar = startSequence; 
+        startSequence = startSequence + intermediateSequence;
+        intermediateSequence = temporaryVar;
+        console.log(startSequence);
+
+    }
+}
+
+fibonacci (8);
